@@ -20,6 +20,6 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 server.applyMiddleware({ app });
 
-app.listen({ port: process.env.PORT || PORT }).then(({ url }) => {
+server.listen({ port: process.env.PORT || PORT }).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
